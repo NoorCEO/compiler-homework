@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+* {
+    scrollbar-width: thin;
+    transition: all .4s ease-in-out;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.compiler--container {
+    height: 100%;
+    width: 100%;
+    background: #E6F6FF;
+    display: flex;
+    place-content: center;
+}
+.compiler--container__view {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    width: 80%;
+    height: 80%;
+    place-self: center;
+    display: grid;
+    grid-template-areas: "navbar navbar" "code result";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 85%;
+}
+.compiler--container__view--navbar {
+    grid-area: navbar;
+    background: #041824;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 24px 24px 0 0;
+    color: #fff;
+}
+.compiler--container__view--navbar * {
+    flex-grow: .1;
+}
+.compiler--container__view--navbar input {
+    background: transparent;
+    font-size: 2em;
+    font-weight: bold;
+    border: 2px solid transparent;
+    color: #fff;
+    padding: 2.5px 5px;
+    border-radius: 5px;
+}
+.compiler--container__view--navbar input:hover {
+    border-color: #fff;
+}
+.compiler--container__view--navbar div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.compiler--container__view--navbar div button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+.compiler--container__view--navbar div button:first-of-type {
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+.compiler--container__view--navbar div button:first-of-type:hover {
+    background: #fff;
+    color: #041824;
+}
+.compiler--container__view--navbar div button:last-of-type {
+    border: 2px solid #21AE62;
+    background: #21AE62;
+    color: #fff;
+}
+.compiler--container__view--navbar div button:last-of-type:hover {
+    filter: brightness(1.1);
+}
+.compiler--container__view--navbar div button svg {
+    margin-right: 10px;
+}
+.compiler--container__view--code {
+    background: #003E61;
+    border-bottom-left-radius: 24px;
+}
+.compiler--container__view--code textarea {
+    background: transparent;
+    color: #fff;
+    border: none;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    padding: 20px;
+    font-size: 1.2em;
+    border-bottom-left-radius: 24px;
+}
+.compiler--container__view--result {
+    border-bottom-right-radius: 24px;
+}
