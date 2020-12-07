@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compiler Homework - Nour Abuhliega</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <div class="compiler--container__view--navbar">
                 <input type="text" name="projectname" id="projectname" value="Untitled Project">
                 <div>
-                    <button>Lexical Analyser</button>
+                    <button onclick="showResult()">Lexical Analyser</button>
                     <button>
                         <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0 0V12L10 6L0 0Z" fill="white" />
@@ -24,14 +24,36 @@
                 </div>
             </div>
             <div class="compiler--container__view--code">
-                <textarea name="code" id="code"></textarea>
+                <textarea name="code" id="code">
+int main()
+{
+    float a;
+    a = 1.1;
+    int i, inc, j;
+    i = 0;
+    inc = 2;
+    read j;
+
+    while (i < j)
+    {
+        i = i + inc;
+        a = a*i;
+    }
+
+    if (a > 10.0)
+    {
+        print(a + i);
+    }
+}
+                </textarea>
             </div>
             <div class="compiler--container__view--result">
                 <!-- Result container -->
+                <pre id="result"></pre>
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>
